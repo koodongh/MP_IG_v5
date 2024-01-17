@@ -10,10 +10,10 @@ def PLC_():
         tag_IG = 'M1907_IG_DETECTED'  
         is_IG = comm.Read(tag_IG).Value
         print(f'is_IG : {is_IG}')
-        if is_IG == False :
-            comm.Write(tag_IG, True)
-            is_IG = comm.Read(tag_IG).Value
-            print(f'is_IG : {is_IG}')
+        #if is_IG == False :
+        comm.Write(tag_IG, True)
+        is_IG = comm.Read(tag_IG).Value
+        print(f'is_IG : {is_IG}')
         # bool 태그에 데이터 쓰기
 
 if __name__ == '__main__':
